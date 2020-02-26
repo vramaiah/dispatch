@@ -121,7 +121,7 @@ RUN set -x \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* 
 
-COPY ./docker/docker-entrypoint.sh ./docker/.env $DISPATCH_CONF/
+COPY ./docker-entrypoint.sh ./.env $DISPATCH_CONF/
 
 EXPOSE 8000
 VOLUME /var/lib/dispatch/files
